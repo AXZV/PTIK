@@ -1,0 +1,48 @@
+@media (max-width: 480px){
+    .bagian2{
+        height: 700px;
+        top: 500px;
+    }
+    .prestasi1, .prestasi2, .prestasi3, .prestasi4, .prestasi5, .prestasi6{
+            margin-left: 0em;
+            width: 100px auto;
+            height: 100px auto;
+        }
+}
+@media (max-width: 767px) {
+    .bagian2{
+        height: 700px;
+        top: 500px;
+    }
+    .prestasi1, .prestasi2, .prestasi3, .prestasi4, .prestasi5, .prestasi6{
+            margin-left: 3em;
+        }
+    .prestasi_ptik {
+        font-size: 17px;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    .bagian2{
+        height: 700px;
+        top: 700px;
+    }
+    .prestasi1, .prestasi2, .prestasi3, .prestasi4, .prestasi5, .prestasi6{
+            margin-left: 6em;
+        }
+    .prestasi_ptik {
+        font-size: 17px;
+    }
+}
+    
+@media (min-width: 1200px) {
+    .bagian2{
+        height: 700px;
+        top: 700px;
+    }
+    .prestasi1, .prestasi2, .prestasi3, .prestasi4, .prestasi5, .prestasi6{
+            margin-left: 9em;
+        }
+    .prestasi_ptik {
+        font-size: 20px;
+    }
+}

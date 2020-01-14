@@ -1,0 +1,119 @@
+@media (max-width: 480px){
+    .bagian4{
+        height: 700px;
+        top: 2900px;
+    }
+}
+@media (max-width: 767px) {
+    .bagian4{
+        height: 700px;
+        top: 2800px;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    .bagian4{
+        height: 700px;
+        top: 2100px;
+    }
+
+    .framecontact{
+        margin-top: 4em;
+        margin-left: 0px;
+        right: 2em;
+        width: 640px;
+        height: 350px;
+    }
+    iframe{
+        margin-top: 10em;
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        right: 0.4em;
+        margin-left: 0em;
+    }
+
+    .framekritik{
+        margin-top: 4em;
+        margin-left: 2em;
+        width: 270px;
+        height: 350px;
+    }
+
+    .groupnama {  
+        margin-top: 1em;
+    }
+
+    .groupmail {
+        margin-top: 4em;
+
+    }
+
+    .groupcoment {
+        margin-top: 7em;
+    }
+
+    input#nama, textarea#coment, input#mail {
+        width:230px;
+    }
+
+    .button {
+        margin-left: 0;
+        right: 7.4em;
+        margin-top: 11.2em;
+    }
+}
+    
+@media (min-width: 1200px){
+    .bagian4{
+        height: 700px;
+        top: 2100px;
+    }
+
+    .framecontact{
+        margin-top: 4em;
+        margin-left: 0px;
+        right: 2em;
+        width: 800px;
+        height: 310px;
+    }
+
+    iframe{
+        margin-top: 0.7em;
+        position: absolute;
+        width: 275px;
+        height: 275px;
+        right: 0.7em;
+        margin-left: 0em;
+    }
+
+    .framekritik{
+        margin-top: 4em;
+        margin-left: 2em;
+        width: 430px;
+        height: 310px;
+    }
+
+    .groupnama {  
+        margin-top: 2em;
+    }
+
+    .groupmail {
+        margin-top: 5em;
+
+    }
+
+    .groupcoment {
+        margin-top: 8em;
+    }
+
+    input#nama, textarea#coment, input#mail {
+        width:270px;
+    }
+
+    .button {
+        margin-left: 0;
+        right: 1em;
+        margin-top: 8.7em;
+    }
+
+}

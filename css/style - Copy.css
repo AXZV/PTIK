@@ -1,0 +1,1377 @@
+/*=======================================================================  Body  ==============================================================================*/
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+
+    }
+
+
+    body {
+        overflow: auto;
+        overflow-x: hidden;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+        margin: 0px 0px 0px 0px;
+    }
+
+/*=============================================================== Navigation & Header =========================================================================*/
+
+    header {
+        transition: 0.4s;
+    }
+    
+    header{
+        background-color:rgba(255,255,255,.1);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 100%;
+        height: 70px;
+        line-height: 70px;
+        position: fixed;
+        z-index: 100;
+
+    }
+    #nav_b{
+        width: 100%;
+        max-width: 1300px;
+        margin: auto;
+
+    }
+
+    nav{
+        float: right;
+        text-decoration: bold;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    }
+
+    nav a{
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 3px;
+        margin-left: -3px;
+        padding-top: 30px;
+        padding-bottom: 27px;
+        padding-left: 5px;
+        padding-right: 5px;
+        -webkit-transition-duration:0.3s;
+        transition-duration:0.3s;
+    }
+
+    nav a:hover{
+        color: #FFFFFF;
+        border-bottom: 3px solid white;
+        padding-top: 7px;
+        padding-bottom: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    nav a.nav-active {
+            color: #FFFFFF;
+            border-bottom: 3px solid white;
+            padding-top: 7px;
+            padding-bottom: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
+
+    }
+
+    header.sticky{
+        background-color:rgba(255,255,255,0.9);
+        height: 40px;
+        line-height: 40px;
+    }
+
+    header.sticky nav a{
+        color: #121212;
+        text-decoration: none;
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-left: -3px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 5px;
+        padding-right: 5px;
+        -webkit-transition-duration:0.3s;
+        transition-duration:0.3s;
+
+    }
+
+
+    header.sticky nav a:hover{
+        color: #121212;
+        border-bottom: 2px solid #121212;
+        padding-top: 5px;
+        padding-bottom: 8px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    header.sticky nav a.nav-active{
+        color: #121212;
+        border-bottom: 2px solid #121212;
+        padding-top: 5px;
+        padding-bottom: 8px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #gambar_logo{
+        height: 50px;
+        width: 300px;
+        margin-left: 5px;
+        margin-top: 7px;
+    }
+
+    header.sticky #gambar_logo{
+        width:150px;
+        height: 25px;
+        margin-top: 7px;
+        -webkit-transition-duration:0.4s;
+        transition-duration:0.4s;
+    }
+
+    section{
+        box-sizing: border-box;
+        clear: both;
+        width: 100%;
+        height: 700px;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .bagian section:first-child{
+        margin-top: 60px;
+        box-sizing: border-box;
+    }
+
+
+/*======================================================================  SLIDE  =============================================================================*/
+
+.slider-inner:after{
+    box-sizing: border-box;
+    -moz-box-shadow: inset 0 0 10em #000;  
+    -webkit-box-shadow: inset 0 0 10em #000;   
+    box-shadow: inset 0 0 20em #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    z-index: 2;
+    content: "";
+}
+
+#ninja-slider ul {
+    box-sizing: border-box;
+    position:relative;
+    list-style:none;
+}
+
+#ninja-slider li {
+    box-sizing: border-box;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position: absolute;
+    font-size:12px;
+    list-style:none;
+    margin:0;
+    padding:0
+    opacity:0;
+    overflow:hidden;
+}
+
+#ninja-slider li.ns-show {
+    opacity:1;
+    box-sizing: border-box;
+}
+
+
+/*============================================================  IMAGE SLIDE PROPERTY  =========================================================================*/
+
+
+#ninja-slider .ns-img {
+    box-sizing: border-box;
+    background-color:rgba(0,0,0,0.3);
+    background-size:contain;
+    cursor:pointer;
+    display:block;
+    position: absolute;
+    width:100%;
+    height:700px;
+    background-repeat:no-repeat;
+    background-position:center center;
+}
+
+/*=====================================================================  CAPTIONS  =============================================================================*/
+
+#ninja-slider .caption {
+    box-sizing: border-box;
+    margin:auto;
+    left:10px;right:auto;
+    top:auto;
+    bottom:0px;
+    width:absolute;
+    text-align:left;
+    font-family:sans-serif;
+    font-size:11px;
+    color:black;
+    background:none;
+    background-color: rgba(0,0,0,0.5);
+    position:absolute;
+    border-radius: 3px;
+    padding: 8px;
+}
+#ninja-slider li .cap1 {
+    color:white;
+    font:25px verdana;
+    opacity:0;
+    bottom:60%;
+    background-size: auto;
+    -webkit-transition:bottom 1.3s, opacity 1s;
+    transition:bottom 1.3s, opacity 1s;
+}
+
+#ninja-slider li[class*='-'] .cap1 {
+    opacity:1;
+    bottom:39%;
+}
+#ninja-slider li .cap2 {
+    color:white;
+    font-size:20px verdana;
+    bottom:25%;
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+}
+
+#ninja-slider li[class*='-s'] .cap2 {
+    bottom:33.8%;
+}
+
+
+/*=======================================================================  NEXT & PREF BUTTON  ================================================================*/
+  
+
+#ninja-slider-prev, #ninja-slider-next
+{
+    position: absolute;
+    display:inline-block;
+    width:42px;
+    height:56px;
+    line-height:56px;
+    top: 50%;
+    margin-top:-51px;
+    background-color:rgba(0,0,0,0.4);
+    background-color:#ccc\9;
+    backface-visibility:hidden;
+    color:white;
+    overflow:hidden;
+    white-space:nowrap;
+    -webkit-user-select: none;
+    user-select:none;
+    border-radius:2px;
+    z-index:10;
+    opacity:0.3; 
+    font-family:sans-serif;   
+    font-size:13px;
+    cursor:pointer;
+    -webkit-transition:all 0.7s;
+    transition:all 0.7s;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+}
+
+.slider-inner:hover #ninja-slider-prev, .slider-inner:hover #ninja-slider-next {
+    opacity:1;
+    -webkit-animation-name: hvr-wobble-horizontal;
+    animation-name: hvr-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+
+#ninja-slider-prev {
+    left: 10px;
+}
+#ninja-slider-next {
+    right: 10px;
+}
+
+#ninja-slider-prev::before, #ninja-slider-next::before {
+    position: absolute;
+    top: 17px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    backface-visibility:hidden;
+}
+
+#ninja-slider-prev::before {
+    -ms-transform:rotate(-45deg);/*IE 9*/
+    -webkit-transform:rotate(-45deg);
+    transform: rotate(-45deg);
+    right:4px;
+}
+
+#ninja-slider-next::before {
+    -ms-transform:rotate(135deg);/*IE 9*/
+    -webkit-transform:rotate(135deg);
+    transform: rotate(135deg);
+    left:4px;
+}
+
+#ninja-slider-prev div, #ninja-slider-next div {display:none;}
+
+
+/*========================================================================  DOTS BUTTON  =====================================================================*/
+
+#ninja-slider-pager {
+    top: 640px;
+    margin-top:0px auto;
+    text-align:center;
+    display:inline-block;
+    font-size:0;
+    z-index: 100;
+    position: absolute;
+    overflow:hidden;
+    white-space:nowrap;
+    backface-visibility:hidden;
+}
+         
+#ninja-slider-pager a {
+    display:inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: rgba(0,0,0,0.5);
+    font-size:0;
+    margin:2px 6px;
+    cursor:pointer;
+    border-radius:10px;
+    transition: background-color 0.5s ease;
+}
+
+#ninja-slider-pager a:hover 
+{
+    background-color: rgba(225,225,225,0.8);
+}
+#ninja-slider-pager a.active 
+{
+    background-color:white;
+}
+   
+
+#ninja-slider-pager, #ninja-slider-prev, #ninja-slider-next, #ninja-slider-pause-play
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+@media only screen and (max-width:600){
+
+    #ninja-slider-prev, #ninja-slider-next, #ninja-slider-pager{
+        display:none;
+    }
+
+    
+    #ninja-slider li .cap1 {
+        font-size:20px;
+    }
+}
+
+
+/*==============================================================================  Menu  =======================================================================*/
+.menuheading{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 70px;
+    color: #60adac;
+}
+.menuparagraph{
+    font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 15px;
+    color: #60adac;
+}
+.menudivider{
+    margin-top: 50px;
+    margin-left: 25%;
+    border-bottom: 1px solid #60adac;
+    width: 50%;
+}
+
+    .bagian2{
+/*        background: url("../asset/background2.jpg");*/
+        background-color: white;
+        width: 100%;
+        height: 700px;
+        position: absolute;
+        z-index: 2;
+        left: 0px;
+        top: 700px;
+    }
+
+        .textboxfull{
+            margin-left: -10px;
+            margin-top: 5px;
+            width: 100%;
+        }
+
+        #akademi {
+            background-position: 0px 0px; 
+
+        }
+
+        #akademi:hover {
+            background-position: 0px -100px;
+ 
+        }
+
+        .prestasi_ptik{
+            color: #60adac;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bold;
+            width: 300px;
+            height: auto;
+            margin-top: 120px; 
+        }
+
+
+        #textbox_1{
+            display: inline-block;
+            width:300px;
+            margin-left: 25px;
+        }
+
+
+        #textbox_2{
+            display: inline-block;
+            width:300px;
+            margin-left: 50px;
+            margin-top: 70px;
+        }
+
+        #textbox_3{
+            display: inline-block;
+            width:300px;
+            margin-left: 50px;
+            margin-top: 70px;
+        }
+
+        #textbox_4{
+            display: inline-block;
+            width:300px;
+            margin-left: 25px;
+            margin-top: 70px;
+        }
+
+        #textbox_5{
+            display: inline-block;
+            width:300px;
+            margin-left: 50px;
+            margin-top: 70px;
+        }
+
+        #textbox_6{
+            display: inline-block;
+            width:300px;
+            margin-left: 50px;
+            margin-top: 70px;
+        }
+
+/*=============================================================================================================================================================*/
+        
+        .prestasi1{
+            margin-left: 100px;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: transparent url("../asset/menu/dosen.png") 0 0 no-repeat;
+            background-size: 100px;
+            text-decoration: none;
+           -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+
+        }
+
+        .prestasi2{
+            margin-left: 100px;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: transparent url("../asset/menu/mahasiswa.png") 0 0 no-repeat;
+            background-size: 100px;
+            text-decoration: none;
+           -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+
+        }
+
+        .prestasi3{
+            margin-left: 100px;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: transparent url("../asset/menu/modul.png") 0 0 no-repeat;
+            background-size: 100px;
+            text-decoration: none;
+           -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+
+        }
+
+        .prestasi4{
+            margin-left: 100px;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: transparent url("../asset/menu/soal.png") 0 0 no-repeat;
+            background-size: 100px;
+            text-decoration: none;
+           -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+
+        }
+
+        .prestasi5{
+            margin-left: 100px;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: transparent url("../asset/menu/akademik.png") 0 0 no-repeat;
+            background-size: 100px;
+            text-decoration: none;
+           -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+
+        }
+
+        .prestasi6{
+            margin-left: 100px;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: transparent url("../asset/menu/nonakademik.png") 0 0 no-repeat;
+            background-size: 100px;
+            text-decoration: none;
+           -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+        }
+
+
+
+/*==================================================================================  News  ===================================================================*/
+.bagian3{
+/*    background-image: url(../asset/nes.jpg);*/
+    background-color: white;
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    z-index: 3;
+    left: 0px;
+    top: 1400px;
+}
+
+.newsheading{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 70px;
+    color: #60adac;
+}
+
+.newsparagraph{
+    font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 15px;
+    color: #60adac;
+}
+
+.newsdivider{
+    margin-top: 50px;
+    margin-left: 25%;
+    border-bottom: 1px solid #60adac;
+    width: 50%;
+}
+
+/*========================= Tombol Berita Lainya ========================*/
+.arsip {
+    float: right;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-top: -20px;
+    margin-left: 0px;
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    border-radius: 3px;
+    background-color: rgba(97, 174, 172, 1);
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration:0.4s;
+    transition-duration:0.4s;
+}
+.arsip:hover, .arsip:focus, .arsip:active {
+    background-color: white;
+    border: 1px solid #60adac;
+    color: #60adac;
+    -webkit-animation-name: hvr-wobble-horizontal;
+    animation-name: hvr-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+/*===================  Animasi Berita  ====================*/
+
+.hovereffect {
+    width:100%;
+    height:100%;
+    float:left;
+    overflow:hidden;
+    position:relative;
+    text-align:center;
+    cursor:default;
+}
+
+.hovereffect .overlay {
+    width:100%;
+    height:100%;
+    position:absolute;
+    overflow:hidden;
+    top:0;
+    left:0;
+    opacity:0;
+    background-color:rgba(0,0,0,0.5);
+    -webkit-transition:all .4s ease-in-out;
+    transition:all .4s ease-in-out
+}
+
+.hovereffect img {
+    display:block;
+    position:relative;
+    -webkit-transition:all .4s linear;
+    transition:all .4s linear;
+}
+
+.hovereffect h2 {
+    text-transform:uppercase;
+    color:#fff;
+    text-align:center;
+    position:relative;
+    font-size:12px;
+    background:rgba(0,0,0,0.6);
+    -webkit-transform:translatey(-100px);
+    -ms-transform:translatey(-100px);
+    transform:translatey(-100px);
+    -webkit-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
+    padding:10px;
+}
+
+.hovereffect a.info {
+    text-decoration:none;
+    display:inline-block;
+    text-transform:uppercase;
+    color:#fff;
+    border:1px solid #fff;
+    background-color:transparent;
+    opacity:0;
+    filter:alpha(opacity=0);
+    -webkit-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    margin:50px 0 0;
+    padding:7px 14px;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+}
+
+.hovereffect a.info:hover {
+    background-color: #60adac;
+    color: white;
+    -webkit-animation-name: hvr-wobble-vertical;
+    animation-name: hvr-wobble-vertical;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.hovereffect:hover img {
+    -ms-transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+    opacity:1;
+    filter:alpha(opacity=100);
+}
+
+.hovereffect:hover h2,.hovereffect:hover a.info {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -ms-transform:translatey(0);
+    -webkit-transform:translatey(0);
+    transform:translatey(0);
+}
+
+.hovereffect:hover a.info {
+    -webkit-transition-delay:.2s;
+    transition-delay:.2s;
+}    
+@-webkit-keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/*==============================  Tombol Berita  =================================*/
+
+@-webkit-keyframes hvr-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes hvr-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/*===========================================  Berita  ============================================*/
+
+.berita1{
+    box-sizing: border-box;
+    margin:auto;
+    left: 350px;
+    top: 220px;
+    position: absolute;
+    width: 330px;
+    height: 230px
+}
+
+.isiberita1{
+    padding-top: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
+    margin:auto;
+    left: 80px;
+    top: 220px;
+    position: absolute;
+    background-color: whitesmoke;
+    width: 270px;
+    height: 230px;
+}
+.berita2{
+    box-sizing: border-box;
+    margin:auto;
+    left: 80px;
+    top: 450px;
+    position: absolute;
+    width: 330px;
+    height: 230px;
+}
+.isiberita2{
+    padding-top: 10px;
+    box-sizing: border-box;
+    margin:auto;
+    left: 410px;
+    top: 450px;
+    position: absolute;
+    background-color: whitesmoke;
+    width: 270px;
+    height: 230px;
+}
+.berita3{
+    box-sizing: border-box;
+    margin:auto;
+    left: 950px;
+    top: 220px;
+    position: absolute;
+    width: 330px;
+    height: 230px
+}
+.isiberita3{
+    padding-top: 10px;
+    box-sizing: border-box;
+    margin:auto;
+    left: 680px;
+    top: 220px;
+    position: absolute;
+    background-color: whitesmoke;
+    width: 270px;
+    height: 230px;
+}
+
+.berita4{
+    box-sizing: border-box;
+    margin:auto;
+    left: 680px;
+    top: 450px;
+    position: absolute;
+    width: 330px;
+    height: 230px;
+}
+.isiberita4{
+    padding-top: 10px;
+    box-sizing: border-box;
+    margin:auto;
+    left: 1010px;
+    top: 450px;
+    position: absolute;
+    background-color: whitesmoke;
+    width: 270px;
+    height: 230px;
+}
+.judulberita{
+    text-decoration: none;
+    color: black;
+}
+.judulberita:hover{
+    color: #60adac;
+}
+.segitiga1, .segitiga3 {
+    top: 20px;
+    right: -20px;
+    position: absolute;
+    border-top: 35px solid transparent;
+    border-left: 35px solid whitesmoke;
+    border-bottom: 35px solid transparent;
+}
+.segitiga2, .segitiga4 {
+    top: 20px;
+    left: -20px;
+    position: absolute;
+    border-top: 35px solid transparent;
+    border-right: 35px solid whitesmoke;
+    border-bottom: 35px solid transparent;
+}
+#tanggal{
+    top: 2px;
+    font-size: 12px;
+    color: gray;
+}
+#berita1divider{
+    margin-top: 15px;
+    border-bottom: 1px solid gray;
+    width: 200px;
+    margin-left: 13%;
+}
+#isi_berita{
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+/*=========================================================================  Profile  ==========================================================================*/
+.profileheading{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 70px;
+    color: #fff;
+}
+.profileparagraph{
+    font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+}
+.profiledivider{
+    margin-top: 50px;
+    margin-left: 25%;
+    border-bottom: 1px solid #fff;
+    width: 50%;
+}
+
+    .bagian4{
+        background-image: url("../asset/mape.png");
+        width: 100%;
+        height: 700px;
+        position: absolute;
+        z-index: 5;
+        left: 0px;
+        top: 2100px;
+    }
+
+
+    /*Bagian Map Geolocation*/
+    .wrapper_map{
+        width: 100%;
+        height: 250px;
+        position: absolute;
+    }
+/*====================================  Kritik Dan Saran =======================================*/
+    .framekritik{
+        background-color: rgba(0,0,0,0.2);
+        border:2px solid white;
+        border-radius: 3px;
+        margin-top: 7em;
+        position: absolute;
+        margin-left: 2.5em;
+        width: 430px;
+        height: 270px;
+
+    }
+    .kritik{
+        font-family: times, Times New Roman, times-roman, georgia, serif;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .groupnama { 
+        position:absolute; 
+        margin-top: 1em;
+        margin-left: 1em; 
+    }
+
+    .groupmail {
+        margin-top: 4em;
+        margin-left: 1em;
+        position: absolute;
+
+    }
+
+    .groupcoment {
+        position: absolute;
+        margin-top: 7em;
+        margin-left: 1em;
+    }
+
+    #nama {
+        height: 30px;
+        border-radius: 3px;
+    }
+
+    #coment {
+        border-radius: 3px;
+        height: 80px;
+    }
+
+    #mail {
+        height: 30px;
+        border-radius: 3px;
+    }
+
+    input#nama, textarea#coment, input#mail {
+        font-size:18px;
+        padding:10px 10px 10px 5px;
+        display:block;
+        width:270px;
+        border:none;
+        resize: none;
+        border-radius:3px;
+        background-color: rgba(225,225,225);
+    }
+    input#nama:focus, textarea#coment:focus, input#mail:focus { outline:none; }
+
+    label {
+        color:#999; 
+        font-size:18px;
+        font-weight:normal;
+        position:absolute;
+        pointer-events:none;
+        left:5px;
+        top:1px;
+        transition:0.2s ease all; 
+        -moz-transition:0.2s ease all; 
+        -webkit-transition:0.2s ease all;
+    }
+
+    /* text naik */
+    input#nama:focus ~ label,
+    textarea#coment:focus ~ label,
+    input#mail:focus ~ label,
+    input#nama:valid ~ label,
+    textarea#coment:valid ~ label,
+    input#mail:valid ~ label {
+        top:-20px;
+        font-size:14px;
+        color:#fff;
+    }
+
+/*================================  Tombol Kirim Email ===================================*/
+
+    .button {
+        margin-left: 0;
+        right: 1em;
+        margin-top: 7em;
+        position: absolute; 
+        border-radius: 4px;
+        background-color: #60adac;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        height: 50px;
+        width: 100px;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    .button span {
+        top: -5px;
+        margin-left: -5px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+/*==============================================================*/
+
+    .framecontact{
+        background-color: rgba(0,0,0,0.2);
+        border: 2px solid white;
+        border-radius: 3px;
+        margin-top: 7em;
+        position: absolute;
+        margin-left: 0px;
+        right: 2.5em;
+        width: 800px;
+        height: 270px;
+    }
+
+    .pgalamat{
+        text-align: center;
+        position: relative;
+        top: 20px;
+        margin-left: 20px;
+        color: white;
+    }
+    .contact{
+        font-family: times, Times New Roman, times-roman, georgia, serif;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+    }
+    #alamat1, #alamat2, #alamat3, #telp,  #emailalamat{
+        font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    iframe{
+        margin-top: 0.5em;
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        right: 0.5em;
+        margin-left: 0em;
+        border-radius: 125px;
+        border:0px;
+        z-index: 1000;
+        -webkit-box-shadow:10px 10px 10px rgba(0,0,0,0.3);
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+    }
+
+    iframe:hover{
+        border-radius: 0px;
+    }
+ 
+
+/*============================================================================  Footer  ========================================================================*/
+
+
+.footer{
+    margin-left: 0px;
+    width: 100%;
+    height: 170px;
+    z-index: 5;
+    left: 0px;
+    background-color: #212121;
+    top: 2700px;
+}
+
+    .linkfooter{
+        margin-left: 3em;
+        margin-right: 3em;
+        border:2px solid white;
+        margin-right: 0px;
+        width: 40em;
+        height: 80px;
+        left: 280px;
+        position: absolute;
+        margin-top:30px;
+    }
+    .unnes{
+        padding-right: 3em; 
+        left: 1px;
+        border-right: 1px solid white;
+        position: absolute;
+        z-index: 10000;
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .ft{
+        padding-right: 30px;
+        border-right: 1px solid white;
+        position: absolute;
+        z-index: 10000;
+        left: 215px;
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .sikadu{
+        right: 1px;
+        z-index: 10000;
+        position: absolute;
+        color: white;
+        text-decoration:none;
+        font-size: 15px;
+    }
+    .unnes:hover, .ft:hover, .sikadu:hover{
+        text-decoration: underline;
+    }
+
+    .footerdivider{
+        margin-top: -25px;
+        position: absolute;
+        width: 40%;
+        border-bottom: 1px solid white;
+        margin-left: 66%;
+    }
+    .copyright{
+        margin-top: 120px;
+        position: absolute;
+    }
+
+    #textcopyright {
+        color: white;
+        font-family: verdana;
+        font-size: 13px;
+        margin-left: 570px;
+    }
+
+/*=======================================================================  Tombol Floating Back Top  ===========================================================*/
+
+    .cd-top {
+        border: solid white 1px;
+        z-index: 100;
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        position: fixed;
+        bottom: 40px;
+        right: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+        background: url(../asset/up.svg) no-repeat center 50%;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+        -moz-transition: opacity .3s 0s, visibility 0s .3s;
+        transition: opacity .3s 0s, visibility 0s .3s;
+        -webkit-transition-duration:0.3s;
+        transition-duration:0.3s;
+        animation-name: autocolor;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px transparent;
+        -webkit-transition-duration:0.4s;
+        transition-duration:0.4s;
+    }
+
+    .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+        -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+        -moz-transition: opacity .3s 0s, visibility 0s 0s;
+        transition: opacity .3s 0s, visibility 0s 0s;
+    }
+    .cd-top.cd-is-visible {
+        /* Transparansi tombol */
+        visibility: visible;
+        opacity: 1;
+        z-index: 100;
+        border-radius: 3px;
+
+    }
+    .cd-top.cd-fade-out {
+        /* Tombol akan transparan apabila di scroll*/
+        opacity: .5;
+    }
+    .no-touch .cd-top:hover {
+        opacity: 1;
+        background-color: #60adac;
+        border-radius: 3px;
+        -webkit-animation-name: hvr-wobble-vertical;
+        animation-name: hvr-wobble-vertical;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .cd-top {
+            right: 20px;
+            bottom: 20px;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        .cd-top {
+            height: 60px;
+            width: 60px;
+            right: 30px;
+            bottom: 30px;
+        }
+    }
+
+    @keyframes autocolor {
+    0%   {background-color:#7B68EE;}
+    15%  {background-color:#1E90FF;} /*r*/
+    25%  {background-color:#8B0000;}
+    35%  {background-color:#008080;} /*y*/
+    45%  {background-color:#DC143C;}
+    65%  {background-color:#483D8B;} /*b*/
+    75%  {background-color:#20B2AA;}
+    85%  {background-color:#3CB371;} /*g*/
+    100% {background-color:#7B68EE;} /*r*/
+    }
+
+/*===============================================================================  END  ========================================================================

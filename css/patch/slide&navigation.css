@@ -1,0 +1,131 @@
+@media (max-width: 480px){
+    nav a{
+        visibility: hidden;
+    }
+    .slideopen {
+        visibility: visible;
+    }
+    #ninja-slider .ns-img {
+        height:500px;
+    }
+    .slider-inner:after{
+        height: 500px;
+    }
+    #ninja-slider li .cap1 {
+        font:15px verdana;
+        bottom:55%;
+    }
+
+    #ninja-slider li[class*='-'] .cap1 {
+        bottom:40%;
+    }
+    #ninja-slider li .cap2 {
+        bottom:30%;
+    }
+
+    #ninja-slider li[class*='-s'] .cap2 {
+        bottom:35%;
+    }
+    #ninja-slider-pager {
+        top: 470px;
+    }
+}
+@media (max-width: 767px) {
+   nav a{
+        visibility: hidden;
+    }
+    .slideopen {
+        visibility: visible;
+    }
+    #ninja-slider .ns-img {
+        height:500px;
+    }
+    .slider-inner:after{
+        height: 500px;
+    }
+    #ninja-slider li .cap1 {
+        font:15px verdana;
+        bottom:55%;
+    }
+
+    #ninja-slider li[class*='-'] .cap1 {
+        bottom:40%;
+    }
+    #ninja-slider li .cap2 {
+        bottom:30%;
+    }
+
+    #ninja-slider li[class*='-s'] .cap2 {
+        bottom:35%;
+    }
+    #ninja-slider-pager {
+        top: 470px;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    nav a{
+        visibility: visible;
+    }
+    .slideopen {
+        visibility: hidden;
+    }
+    #ninja-slider .ns-img {
+        height:700px;
+    }
+    .slider-inner:after{
+        height: 700px;
+    }
+    #ninja-slider li .cap1 {
+        font:25px verdana;
+        bottom:60%;
+    }
+    #ninja-slider li[class*='-'] .cap1 {
+        bottom:30%;
+    }
+    #ninja-slider li .cap2 {
+        font-size:20px verdana;
+        bottom:15%;
+    }
+
+    #ninja-slider li[class*='-s'] .cap2 {
+        bottom:23%;
+    }
+    #ninja-slider-pager {
+        top: 640px;
+    }
+}
+    
+@media (min-width: 1200px) {
+    nav a{
+        visibility: visible;
+    }
+    .slideopen {
+        visibility: hidden;
+    }
+    #ninja-slider .ns-img {
+        height:700px;
+    }
+    .slider-inner:after{
+        height: 700px;
+    }
+    #ninja-slider li .cap1 {
+        font:25px verdana;
+        bottom:60%;
+    }
+
+    #ninja-slider li[class*='-'] .cap1 {
+        bottom:30%;
+    }
+    #ninja-slider li .cap2 {
+        font-size:20px verdana;
+        bottom:15%;
+    }
+
+    #ninja-slider li[class*='-s'] .cap2 {
+        bottom:23%;
+    }
+    #ninja-slider-pager {
+        top: 640px;
+    }
+
+}

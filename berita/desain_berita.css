@@ -1,0 +1,336 @@
+   
+     .label{
+        position: relative;
+  
+        top: 50px;
+        left: 0px;
+
+    }
+    .label1{
+      position: absolute;
+      right: 535px;
+      top: 20px;
+
+    }
+    h3{
+      position: absolute;
+      z-index: 10;
+      left: 630px;
+      top: 35px;
+      color: white;
+    }
+
+/*    area searching*/
+
+    .label_content{
+      border-bottom:2px solid #60adac;
+      width: 210px;
+      height: 15px;
+      padding: 5px;
+      position: absolute;
+      left: 1030px;
+      top:159px;
+      color: #60adac;
+    }
+
+    .label_content2_luar{
+      position: relative;
+      top: 0px;
+    }
+
+     .label_content2{
+      border-bottom:2px solid #60adac;
+      width: 210px;
+      height: 15px;
+      padding: 5px;
+      position: absolute;
+      left: 1030px;
+      top:260px;
+      color: #60adac;
+    }
+
+    .wrapper_headline_luar{
+        position: relative;
+        top: 0px;
+    }
+
+    .wrapper_headline{
+      
+      color: #60adac;
+      background-color: white;
+      border-radius: 30px 0px 30px 0px;
+      border-left: 2px solid #60adac;
+      border-top: 2px solid #60adac;
+      text-shadow:0 2px 3px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+      position: absolute;
+      width: 220px;
+      height: 600px auto;
+      padding: 20px;
+      right: 80px;
+      top: 300px;
+    }
+
+    .wrapper{
+      margin-left: 10px;
+      outline: none;
+      font-family: sans-serif;
+    }
+
+    .wrapper ul{
+      margin-top: 0px;
+      outline: none;
+
+    }
+
+    .wrapper ul li{
+      margin-top: 0px;
+       width: 180px;
+    }
+
+     .wrapper ul li label{
+      font-weight: bold;
+      margin-top: 20px;
+      outline: none;
+    }
+
+     .wrapper ul ul{
+      margin-top: -20px;
+      font-size: 15px;
+    }
+
+     .wrapper ul ul li a{
+      text-decoration: none;
+      color: grey;
+      font-size: 13px;
+    }
+
+    .wrapper ul ul li a:hover{
+      color: #6223b0;
+    }
+
+
+    h4{
+      font-size: 21px;
+      margin-top: -7px;
+
+    }
+
+    .fcari{
+      position: relative;
+      top: 0px;
+ 
+    }
+
+    input{
+    position: absolute;
+    left: 1040px;
+    top: 200px;
+    z-index: -10px;
+    border:1px solid #d1d1d1;
+    font: bold 14px;
+    color:grey;
+    width:150px;
+    padding:6px 15px 6px 35px;
+    border-radius:20px;
+    text-shadow:0 2px 3px rgba(0,0,0,0.1);
+    box-shadow:0 1px 3px rgba(0,0,0,0.15) inset;
+    -webkit-transition: all 0.7s ease;
+  }
+
+  input:focus{
+    width:200px;
+    outline:0px;
+  }
+
+  
+
+    ul p{
+      font-weight: bold;
+      font-family: sans-serif;
+      font-size: 16px;
+
+
+  
+    }
+    li{
+      text-transform: lowercase;
+      
+    }
+
+
+    ul{
+      margin: 0px;
+      padding: 0px;
+    }
+
+    label{
+      display: block;
+      cursor: pointer;
+      width: 39px;
+      margin-bottom: 20px;
+
+    }
+    label.last{
+      border-bottom: 1px solid #fff;
+    }
+
+    ul ul li{
+      padding: 3px;
+      width: 200px;
+      margin-left: 25px;
+    }
+
+
+    input[type="checkbox"]{
+      position: absolute;
+      left: -9999px;
+    }
+
+    input[type="checkbox"] ~ ul{
+      height: 0;
+      transform: scaleY(0);
+    }
+
+    input[type="checkbox"]:checked ~ ul{
+      height: 100%;
+      transform-origin: top;
+      transition: transform 0.1s ease-out;
+      transform: scaleY(1); 
+    }
+    input[type="checkbox"]:checked + label{
+      border-bottom: 1px solid #fff;
+    }
+    
+    .wrapper_berita_1{
+        margin-top: 200px;
+        margin-left: 40px;
+        padding-left: 40px;
+        width:870px;
+        min-height: 1200px;
+        height: 1200px auto;
+        float: left;
+        position: absolute;
+     
+    }
+
+       .berita{
+          width: 250px;
+          padding-left: 0px;
+          padding-top: 10px;
+          height: 450px auto;
+          margin-left: 30px;
+          margin-top: 30px;
+          display: inline;
+          float: left;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+          border: 1px solid grey;
+
+        }
+
+        
+
+        .judul_berita{
+
+          width: 300px;
+          padding: 20px;
+          height: 70px auto;
+          color: #60adac;
+          text-align: center;
+          font-size: 15px;
+          padding:0px;
+          text-transform: uppercase;      
+          margin-bottom: 5px;
+          border-bottom:3px solid #60adac;
+          vertical-align: text-bottom;
+          font-weight: bold;
+     
+
+        }
+
+     
+
+        .gambar_berita img {
+          width: 300px;
+          height: 240px;
+
+        }
+
+        .isi_berita{
+          width: 300px;
+          height: 155px;
+          padding: 10px;
+          margin-top: 0px;
+          
+
+        }
+
+        .footer_berita{
+          width: 300px;
+          height: 30px;
+          margin-top: -40px;
+        
+        }
+
+        .footer_berita p{
+          font-size: 11px;
+          margin-left: 10px;
+          color: grey;
+          width: 150px;
+        }
+
+        .footer_berita a{
+          float: right;
+          margin-right: 10px;
+          background-color: #60adac;
+          text-decoration: none;
+          color: white;
+          font-family: sans-serif;
+          font-size: 12px;
+          padding: 3px;
+        }
+
+        .footer_berita a:hover{
+          background-color: #3665af;
+        }
+
+
+    .btn {
+        margin-top: -20px;
+        /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);*/
+    }
+
+    .wrapper_berita_luar, .judul_berita, .gambar_berita, .gambar_berita_dalam, .isi_berita, .footer_berita{
+      max-width: 240px;
+      max-height: 200px;
+
+    }
+
+    .wrapper_footer{
+      clear: both;
+      margin: 0px;
+      padding: 0px;
+    }
+
+
+  .footer{
+    position: relative;
+    top: 1200px;
+    z-index: 1;
+    clear: both;
+
+  }
+
+  .peringatan{
+    font-size: 15px;
+    font-family: arial, helvetica, sans-serif;
+    color: grey;
+    text-align: center;
+    margin-top: 50px;
+    letter-spacing: 3px;
+
+
+  }
+
+
+

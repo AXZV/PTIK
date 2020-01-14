@@ -1,0 +1,190 @@
+   
+     .label{
+        position: relative;
+  
+        top: 50px;
+        left: 0px;
+
+    }
+    .label1{
+      position: absolute;
+      right: 535px;
+      top: 20px;
+
+    }
+    h3{
+      position: absolute;
+      z-index: 10;
+      left: 630px;
+      top: 35px;
+      color: white;
+    }
+
+    .label_content{
+      border-bottom:2px solid #60adac;
+      width: 210px;
+      height: 15px;
+      padding: 5px;
+      position: absolute;
+      left: 1030px;
+      top:159px;
+      color: #60adac;
+    }
+
+    .label_content2_luar{
+      position: relative;
+      top: 0px;
+      background-color: red;
+    }
+
+     .label_content2{
+      border-bottom:2px solid #60adac;
+      width: 210px;
+      height: 15px;
+      padding: 5px;
+      position: absolute;
+      left: 1030px;
+      top:350px;
+      color: #60adac;
+    }
+
+    h4{
+      font-size: 21px;
+      margin-top: -7px;
+
+    }
+
+    .fcari{
+      position: relative;
+      top: 0px;
+ 
+    }
+
+    input{
+    position: absolute;
+    left: 1040px;
+    top: 200px;
+    z-index: -10px;
+    border:1px solid #d1d1d1;
+    font: bold 14px;
+    color:#bebebe;
+    width:150px;
+    padding:6px 15px 6px 35px;
+    border-radius:20px;
+    text-shadow:0 2px 3px rgba(0,0,0,0.1);
+    box-shadow:0 1px 3px rgba(0,0,0,0.15) inset;
+    -webkit-transition: all 0.7s ease;
+  }
+
+  input:focus{
+    width:200px;
+    outline:0px;
+  }
+    
+    .wrapper_berita_1{
+        margin-top: 200px;
+        margin-left: 40px;
+        padding-left: 40px;
+        width:870px;
+        height: 700px;
+        float: left;
+       
+
+
+     
+    }
+
+       .berita{
+          width: 250px;
+          padding-left: 0px;
+          padding-top: 10px;
+          height: 450px auto;
+          margin-left: 30px;
+          display: inline;
+          float: left;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        
+
+        .judul_berita{
+
+          width: 300px;
+          padding: 20px;
+          height: 70px auto;
+          color: #60adac;
+          text-align: center;
+          font-size: 15px;
+          padding:0px;
+          text-transform: uppercase;      
+          margin-bottom: 5px;
+          border-bottom:3px solid #60adac;
+          vertical-align: text-bottom;
+          font-weight: bold;
+     
+
+        }
+
+     
+
+        .gambar_berita img {
+          width: 300px;
+          height: 240px;
+
+        }
+
+        .isi_berita{
+          width: 300px;
+          height: 155px;
+          padding: 10px;
+          margin-top: 0px;
+          
+
+        }
+
+        .footer_berita{
+          width: 300px;
+          height: 30px;
+          margin-top: -40px;
+        
+        }
+
+        .footer_berita p{
+          font-size: 11px;
+          margin-left: 10px;
+          color: grey;
+          width: 150px;
+        }
+
+        .footer_berita a{
+          float: right;
+          margin-right: 10px;
+          background-color: #60adac;
+          text-decoration: none;
+          color: white;
+          font-family: sans-serif;
+          font-size: 12px;
+          padding: 3px;
+        }
+
+        .footer_berita a:hover{
+          background-color: #3665af;
+        }
+
+
+    .btn {
+        margin-top: -20px;
+        /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);*/
+    }
+
+    .wrapper_berita_luar, .judul_berita, .gambar_berita, .gambar_berita_dalam, .isi_berita, .footer_berita{
+      max-width: 240px;
+      max-height: 200px;
+
+    }
+
+    .wrapper_footer{
+      clear: both;
+      margin: 0px;
+      padding: 0px;
+    }

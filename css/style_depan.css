@@ -1,0 +1,1384 @@
+/*=======================================================================  Body  ==============================================================================*/
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+
+    }
+
+
+    body {
+        font-size: 18px; 
+        overflow: auto;
+        overflow-x: hidden;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+        margin: 0px 0px 0px 0px;
+
+    }
+/*=======================================================================================================*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000000000;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.slideopen {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    color: white;
+}
+header.sticky .slideopen {
+    color: black;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/*=============================================================== Navigation & Header =========================================================================*/
+
+    header {
+        transition: 0.4s;
+    }
+    
+    header{
+        background-color:rgba(255,255,255,.1);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        width: 100%;
+        height: 70px;
+        line-height: 70px;
+        position: fixed;
+        z-index: 100;
+
+    }
+    #nav_b{
+        width: 100%;
+        max-width: 1300px;
+        margin: auto;
+
+    }
+
+    nav{
+        float: right;
+        text-decoration: bold;
+        font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    }
+
+    nav a{
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 3px;
+        margin-left: -3px;
+        padding-top: 30px;
+        padding-bottom: 27px;
+        padding-left: 5px;
+        padding-right: 5px;
+        -webkit-transition-duration:0.3s;
+        transition-duration:0.3s;
+    }
+
+    nav a:hover{
+        color: #FFFFFF;
+        border-bottom: 3px solid white;
+        padding-top: 7px;
+        padding-bottom: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    nav a.nav-active {
+            color: #FFFFFF;
+            border-bottom: 3px solid white;
+            padding-top: 7px;
+            padding-bottom: 20px;
+            padding-left: 5px;
+            padding-right: 5px;
+
+    }
+
+    header.sticky{
+        background-color:rgba(255,255,255,0.9);
+        height: 40px;
+        line-height: 40px;
+    }
+
+    header.sticky nav a{
+        color: #121212;
+        text-decoration: none;
+        font-size: 12px;
+        letter-spacing: 3px;
+        margin-left: -3px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 5px;
+        padding-right: 5px;
+        -webkit-transition-duration:0.3s;
+        transition-duration:0.3s;
+
+    }
+
+
+    header.sticky nav a:hover{
+        color: #121212;
+        border-bottom: 2px solid #121212;
+        padding-top: 5px;
+        padding-bottom: 8px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    header.sticky nav a.nav-active{
+        color: #121212;
+        border-bottom: 2px solid #121212;
+        padding-top: 5px;
+        padding-bottom: 8px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #gambar_logo{
+        height: 50px;
+        width: 300px;
+        margin-left: 5px;
+        margin-top: 7px;
+    }
+
+    header.sticky #gambar_logo{
+        width:150px;
+        height: 25px;
+        margin-top: 7px;
+        -webkit-transition-duration:0.4s;
+        transition-duration:0.4s;
+    }
+
+    section{
+        box-sizing: border-box;
+        clear: both;
+        width: 100%;
+        height: 700px;
+        text-align: center;
+        padding: 0px;
+    }
+
+    .bagian section:first-child{
+        margin-top: 60px;
+        box-sizing: border-box;
+    }
+
+
+/*======================================================================  SLIDE  =============================================================================*/
+
+.slider-inner:after{
+    box-sizing: border-box;
+    -moz-box-shadow: inset 0 0 10em #000;  
+    -webkit-box-shadow: inset 0 0 10em #000;   
+    box-shadow: inset 0 0 20em #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    z-index: 2;
+    content: "";
+}
+
+
+/*#ninja-slider ul {
+    box-sizing: border-box;
+    position:relative;
+    list-style:none;
+}*/
+
+#ninja-slider li {
+    box-sizing: border-box;
+    width:100%;
+    height:700px;
+    top:0;
+    left:0;
+    position: absolute;
+    font-size:12px;
+    list-style:none;
+    margin:0;
+    padding:0
+    opacity:0;
+    overflow:hidden;
+}
+
+/*#ninja-slider li.ns-show {
+    opacity:1;
+    box-sizing: border-box;
+}*/
+
+
+/*============================================================  IMAGE SLIDE PROPERTY  =========================================================================*/
+
+
+#ninja-slider .ns-img {
+    background-color:rgba(0,0,0,0.3);
+    cursor:pointer;
+    display:block;
+    position: absolute;
+    width:100%;
+    height:700px;
+}
+
+/*=====================================================================  CAPTIONS  =============================================================================*/
+
+#ninja-slider .caption {
+    box-sizing: border-box;
+    margin:auto;
+    left:10px;right:auto;
+    top:auto;
+    bottom:0px;
+    width:absolute;
+    text-align:left;
+    font-family:sans-serif;
+    font-size:11px;
+    color:black;
+    background:none;
+    background-color: rgba(0,0,0,0.5);
+    position:absolute;
+    border-radius: 3px;
+    padding: 8px;
+}
+#ninja-slider li .cap1 {
+    color:white;
+    font:25px verdana;
+    opacity:0;
+    bottom:60%;
+    background-size: auto;
+    -webkit-transition:bottom 1.3s, opacity 1s;
+    transition:bottom 1.3s, opacity 1s;
+}
+
+#ninja-slider li[class*='-'] .cap1 {
+    opacity:1;
+    bottom:30%;
+}
+#ninja-slider li .cap2 {
+    color:white;
+    font-size:20px verdana;
+    bottom:15%;
+    -webkit-transition-delay: 1s;
+    transition-delay: 1s;
+}
+
+#ninja-slider li[class*='-s'] .cap2 {
+    bottom:23%;
+}
+
+
+/*=======================================================================  NEXT & PREF BUTTON  ================================================================*/
+  
+
+#ninja-slider-prev, #ninja-slider-next
+{
+    position: absolute;
+    display:inline-block;
+    width:42px;
+    height:56px;
+    line-height:56px;
+    top: 50%;
+    margin-top:-51px;
+    background-color:rgba(0,0,0,0.4);
+    background-color:#ccc\9;
+    backface-visibility:hidden;
+    color:white;
+    overflow:hidden;
+    white-space:nowrap;
+    -webkit-user-select: none;
+    user-select:none;
+    border-radius:2px;
+    z-index:10;
+    opacity:0.3; 
+    font-family:sans-serif;   
+    font-size:13px;
+    cursor:pointer;
+    -webkit-transition:all 0.7s;
+    transition:all 0.7s;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+}
+
+.slider-inner:hover #ninja-slider-prev, .slider-inner:hover #ninja-slider-next {
+    opacity:1;
+    -webkit-animation-name: hvr-wobble-horizontal;
+    animation-name: hvr-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+
+#ninja-slider-prev {
+    left: 10px;
+}
+#ninja-slider-next {
+    right: 10px;
+}
+
+#ninja-slider-prev::before, #ninja-slider-next::before {
+    position: absolute;
+    top: 17px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    backface-visibility:hidden;
+}
+
+#ninja-slider-prev::before {
+    -ms-transform:rotate(-45deg);/*IE 9*/
+    -webkit-transform:rotate(-45deg);
+    transform: rotate(-45deg);
+    right:4px;
+}
+
+#ninja-slider-next::before {
+    -ms-transform:rotate(135deg);/*IE 9*/
+    -webkit-transform:rotate(135deg);
+    transform: rotate(135deg);
+    left:4px;
+}
+
+#ninja-slider-prev div, #ninja-slider-next div {display:none;}
+
+
+/*========================================================================  DOTS BUTTON  =====================================================================*/
+
+#ninja-slider-pager {
+    top: 640px;
+    margin: auto;
+    display:inline-block;
+    font-size:0;
+    z-index: 100;
+    position: absolute;
+    overflow:hidden;
+    white-space:nowrap;
+    backface-visibility:hidden;
+}
+         
+#ninja-slider-pager a {
+    display:inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: rgba(0,0,0,0.5);
+    font-size:0;
+    margin:2px 6px;
+    cursor:pointer;
+    border-radius:10px;
+    transition: background-color 0.5s ease;
+}
+
+#ninja-slider-pager a:hover 
+{
+    background-color: rgba(225,225,225,0.8);
+}
+#ninja-slider-pager a.active 
+{
+    background-color:white;
+}
+   
+
+#ninja-slider-pager, #ninja-slider-prev, #ninja-slider-next, #ninja-slider-pause-play
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/*@media only screen and (max-width:600){
+
+    #ninja-slider-prev, #ninja-slider-next, #ninja-slider-pager{
+        display:none;
+    }
+
+    
+    #ninja-slider li .cap1 {
+        font-size:20px;
+    }
+}*/
+
+
+/*==============================================================================  Menu  =======================================================================*/
+.menuheading{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 70px;
+    color: #60adac;
+}
+.menuparagraph{
+    font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 15px;
+    color: #60adac;
+}
+.menudivider{
+    margin-top: 50px;
+    margin-left: 25%;
+    border-bottom: 1px solid #60adac;
+    width: 50%;
+}
+
+/*======================================================================================*/
+.grid-container-menu1{
+        height: 200px;
+        width: 100% auto;
+        margin-right: 2em;
+        margin-left: 2em;
+        margin-top: 4em;
+/*        border:2px solid white;*/
+    }
+.grid-container-menu2{
+        height: 200px;
+        width: 100% auto;
+        margin-right: 2em;
+        margin-left: 2em;
+        margin-top: 3em;
+/*        border:2px solid white;*/
+    } 
+    .row:before, 
+    .row:after {
+        content:"";
+          display: table ;
+        clear:both;
+    }
+
+    [class*='col-menu'] {
+        float: left;  
+        width: 20%;
+/*        background-color: white;
+        border: 1px solid white;*/
+    }
+
+    .col-menu{ width: 33.33%; }
+
+    [class*='col-menu'] > p {
+     margin: 0;
+     text-align: center;
+     padding-top: 4px;
+/*     border: 1px solid white;
+     background-color: white; */
+    }
+/*=======================================================================================*/
+
+    .bagian2{
+
+        background: url("../asset/background2.jpg");
+/*        background-color: white;*/
+        width: 100%;
+        height: 700px;
+        position: absolute;
+        z-index: 2;
+        left: 0px;
+        top: 700px;
+        border-bottom: 1px solid white;
+    }
+
+        #akademi {
+            background-position: 0px 0px; 
+
+        }
+
+        #akademi:hover {
+            background-position: 0px -100px;
+ 
+        }
+
+        .prestasi_ptik{
+            color: #60adac;
+            text-align: center;
+            font-family: sans-serif;
+            width: auto;
+            height: auto; 
+        }
+
+/*=============================================================================================================================================================*/
+        
+        .prestasi1{
+            margin-left: 9em;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: transparent url("../asset/menu/dosen.png") 0 0 no-repeat;
+            background-size: 100px;
+            text-decoration: none;
+           -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+
+        }
+
+        .prestasi2{
+            margin-left: 9em;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: transparent url("../asset/menu/mahasiswa.png") 0 0 no-repeat;
+            background-size: 100px;
+            text-decoration: none;
+           -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+
+        }
+
+        .prestasi3{
+            margin-left: 9em;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: transparent url("../asset/menu/logo km.png") 0 0 no-repeat;
+            background-size: 100px;
+            text-decoration: none;
+           -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+
+        }
+
+        .prestasi4{
+            margin-left: 9em;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: transparent url("../asset/menu/logo lp.png") 0 0 no-repeat;
+            background-size: 100px;
+            text-decoration: none;
+           -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+
+        }
+
+        .prestasi5{
+            margin-left: 9em;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: transparent url("../asset/menu/akademik.png") 0 0 no-repeat;
+            background-size: 100px;
+            text-decoration: none;
+           -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+
+        }
+
+        .prestasi6{
+            margin-left: 9em;
+            width: 100px;
+            height: 100px;
+            float: left;
+            background: transparent url("../asset/menu/nonakademik.png") 0 0 no-repeat;
+            background-size: 100px;
+            text-decoration: none;
+           -webkit-transition: all 0.3s ease;
+                  transition: all 0.3s ease;
+        }
+
+
+
+/*==================================================================================  News  ===================================================================*/
+.bagian3{
+    background-image: url(../asset/nes.jpg);
+/*    background-color: white;*/
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    z-index: 3;
+    left: 0px;
+    top: 1400px;
+}
+
+.newsheading{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 70px;
+    color: #60adac;
+}
+
+.newsparagraph{
+    font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 15px;
+    color: #60adac;
+}
+
+.newsdivider{
+    margin-top: 50px;
+    margin-left: 25%;
+    border-bottom: 1px solid #60adac;
+    width: 50%;
+}
+/*==============================================================================================*/
+.grid-container-news{
+    position: relative;
+    height: 390px;
+    width: 100% auto;
+/*    border:2px solid gray;*/
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 4em;
+
+}
+
+    /*-- our cleafix hack -- */ 
+    .row:before, 
+    .row:after {
+        content:"";
+          display: table ;
+        clear:both;
+    }
+
+    [class*='col-1'], [class*='col-2'] {
+        float: left; 
+        min-height: 20px; 
+        width: 20%;
+        padding:0px 10px 0px 10px;
+        height: 300px;
+
+    }
+
+    .col-1{ width: 25%; }
+    .col-2{ width: 25%; }
+
+    /*-- some extra column content styling --*/
+    [class*='col-1'] > p, [class*='col-2'] > p  {
+     margin: 0;
+     text-align: center; 
+    }
+
+/*===============================================================================================*/
+/*========================= Tombol Berita Lainya ========================*/
+.arsip {
+    float: right;
+    overflow: hidden;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+    background-color: rgba(97, 174, 172, 1);
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration:0.4s;
+    transition-duration:0.4s;
+}
+.arsip:hover, .arsip:focus, .arsip:active {
+    background-color: white;
+    border: 1px solid #60adac;
+    color: #60adac;
+    -webkit-animation-name: hvr-wobble-horizontal;
+    animation-name: hvr-wobble-horizontal;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+/*===================  Animasi Berita  ====================*/
+
+.hovereffect {
+    width:100%;
+    height:250px;
+    float:left;
+    overflow:hidden;
+    position:relative;
+    text-align:center;
+    cursor:default;
+}
+
+.hovereffect .overlay {
+    width:100%;
+    height:100%;
+    position:absolute;
+    overflow:hidden;
+    top:0;
+    left:0;
+    opacity:0;
+    background-color:rgba(0,0,0,0.5);
+    -webkit-transition:all .4s ease-in-out;
+    transition:all .4s ease-in-out
+}
+
+.hovereffect img {
+    display:block;
+    position:relative;
+    -webkit-transition:all .4s linear;
+    transition:all .4s linear;
+}
+
+.hovereffect h2 {
+    text-transform:uppercase;
+    color:#fff;
+    text-align:center;
+    position:relative;
+    font-size:12px;
+    background:rgba(0,0,0,0.6);
+    -webkit-transform:translatey(-100px);
+    -ms-transform:translatey(-100px);
+    transform:translatey(-100px);
+    -webkit-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
+    padding:10px;
+}
+
+.hovereffect a.info {
+    text-decoration:none;
+    display:inline-block;
+    text-transform:uppercase;
+    color:#fff;
+    border:1px solid #fff;
+    background-color:transparent;
+    opacity:0;
+    filter:alpha(opacity=0);
+    -webkit-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    margin:50px 0 0;
+    padding:7px 14px;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+}
+
+.hovereffect a.info:hover {
+    background-color: #60adac;
+    color: white;
+    -webkit-animation-name: hvr-wobble-vertical;
+    animation-name: hvr-wobble-vertical;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+.hovereffect:hover img {
+    -ms-transform:scale(1.2);
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+    opacity:1;
+    filter:alpha(opacity=100);
+}
+
+.hovereffect:hover h2,.hovereffect:hover a.info {
+    opacity:1;
+    filter:alpha(opacity=100);
+    -ms-transform:translatey(0);
+    -webkit-transform:translatey(0);
+    transform:translatey(0);
+}
+
+.hovereffect:hover a.info {
+    -webkit-transition-delay:.2s;
+    transition-delay:.2s;
+}    
+@-webkit-keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes hvr-wobble-vertical {
+  16.65% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+  33.3% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+  66.6% {
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+/*==============================  Tombol Berita  =================================*/
+
+@-webkit-keyframes hvr-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@keyframes hvr-wobble-horizontal {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/*===========================================  Berita  ============================================*/
+
+/*=========================================  Format Text ========================================*/
+.judulberita{
+    font-size: 11px;
+    text-decoration: none;
+    color: black;
+    -webkit-transition-duration:0.4s;
+    transition-duration:0.4s;
+}
+.img-responsive{
+    max-width: 100%;
+    width: 500px;
+    height: 280px;
+
+}
+
+.judulberita:hover{
+    color: #60adac;
+
+
+}
+
+#tanggal{
+    top: 2px;
+    font-size: 12px;
+    color: gray;
+
+}
+
+#beritadivider{
+    border-bottom: 1px solid gray;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#isiberita{
+    color: black;
+    border: 1px solid #60adac;
+    padding: 13px;
+    font-size: 11px;
+    box-shadow: 0 0px 30px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*=========================================================================  Profile  ==========================================================================*/
+.profileheading a{
+    font-family: times, Times New Roman, times-roman, georgia, serif;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 70px;
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition-duration:1s;
+    transition-duration:1s;
+}
+
+.profileheading a:hover{
+    color: #77e800;
+    text-decoration: underline;
+}
+.profileparagraph{
+    font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+}
+.profiledivider{
+    margin-top: 50px;
+    margin-left: 25%;
+    border-bottom: 1px solid #fff;
+    width: 50%;
+}
+
+    .bagian4{
+        background-image: url("../asset/mape.png");
+        width: 100%;
+        height: 700px;
+        position: absolute;
+        z-index: 5;
+        left: 0px;
+        top: 2100px;
+    }
+
+
+    /*Bagian Map Geolocation*/
+    .wrapper_map{
+        width: 100%;
+        height: 250px;
+        position: absolute;
+    }
+/*====================================  Kritik Dan Saran =======================================*/
+    .framekritik{
+        background-color: rgba(0,0,0,0.2);
+        border:2px solid white;
+        border-radius: 3px;
+        margin-top: 4em;
+        position: absolute;
+        margin-left: 2em;
+        width: 430px;
+        height: 310px;
+    }
+    .kritik{
+        font-family: times, Times New Roman, times-roman, georgia, serif;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .groupnama { 
+        position:absolute; 
+        margin-top: 2em;
+        margin-left: 1em; 
+    }
+
+    .groupmail {
+        margin-top: 5em;
+        margin-left: 1em;
+        position: absolute;
+
+    }
+
+    .groupcoment {
+        position: absolute;
+        margin-top: 8em;
+        margin-left: 1em;
+    }
+
+    #nama {
+        height: 30px;
+        border-radius: 3px;
+    }
+
+    #coment {
+        border-radius: 3px;
+        height: 80px;
+    }
+
+    #mail {
+        height: 30px;
+        border-radius: 3px;
+    }
+
+    input#nama, textarea#coment, input#mail {
+        font-size:18px;
+        padding:10px 10px 10px 5px;
+        display:block;
+        width:270px;
+        border:none;
+        resize: none;
+        border-radius:3px;
+        background-color: rgba(225,225,225);
+    }
+    input#nama:focus, textarea#coment:focus, input#mail:focus { outline:none; }
+
+    label {
+        color:#999; 
+        font-size:18px;
+        font-weight:normal;
+        position:absolute;
+        pointer-events:none;
+        left:5px;
+        top:1px;
+        transition:0.2s ease all; 
+        -moz-transition:0.2s ease all; 
+        -webkit-transition:0.2s ease all;
+    }
+
+    /* text naik */
+    input#nama:focus ~ label,
+    textarea#coment:focus ~ label,
+    input#mail:focus ~ label,
+    input#nama:valid ~ label,
+    textarea#coment:valid ~ label,
+    input#mail:valid ~ label {
+        top:-20px;
+        font-size:14px;
+        color:#fff;
+    }
+
+/*================================  Tombol Kirim Email ===================================*/
+
+    .button {
+        margin-left: 0;
+        right: 1em;
+        margin-top: 8.7em;
+        position: absolute; 
+        border-radius: 4px;
+        background-color: #60adac;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        height: 50px;
+        width: 100px;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    .button span {
+        top: -5px;
+        margin-left: -5px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+
+/*==================================================  Contact US  =============================================*/
+
+    .framecontact{
+        background-color: rgba(0,0,0,0.2);
+        border: 2px solid white;
+        border-radius: 3px;
+        margin-top: 4em;
+        position: absolute;
+        margin-left: 0px;
+        right: 2em;
+        width: 800px;
+        height: 310px;
+    }
+
+    .pgalamat{
+        text-align: center;
+        position: relative;
+        top: 20px;
+        margin-left: 20px;
+        color: white;
+    }
+    .contact{
+        font-family: times, Times New Roman, times-roman, georgia, serif;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+    }
+    #alamat1, #alamat2, #alamat3, #alamat4, #telp,  #emailalamat{
+        font-family: "Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    iframe{
+        margin-top: 0.5em;
+        position: absolute;
+        width: 275px;
+        height: 275px;
+        right: 0.5em;
+        margin-left: 0em;
+        border-radius: 135px;
+        border:0px;
+        z-index: 1000;
+        -webkit-box-shadow:10px 10px 10px rgba(0,0,0,0.3);
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+    }
+
+    iframe:hover{
+        border-radius: 0px;
+        width: 275px;
+    }
+ 
+
+/*============================================================================  Footer  ========================================================================*/
+
+
+.footer{
+    margin-left: 0px;
+    width: 100%;
+    height: 170px;
+    z-index: 5;
+    left: 0px;
+    background-color: #212121;
+    top: 2700px;
+}
+
+    .linkfooter{
+        margin-left: 3em;
+        margin-right: 3em;
+        border:2px solid white;
+        margin-right: 200px;
+        width: 40em;
+        height: 80px;
+        left: 280px;
+        position: absolute;
+        margin-top:30px;
+    }
+    .unnes{
+        padding-right: 3em; 
+        left: 160px;
+        border-right: 1px solid white;
+        position: absolute;
+        z-index: 10000;
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .ft{
+        padding-right: 30px;
+        border-right: 1px solid white;
+        position: absolute;
+        z-index: 10000;
+        left: 285px;
+        color: white;
+        font-size: 15px;
+        text-decoration: none;
+    }
+    .sikadu{
+        right: 150px;
+        z-index: 10000;
+        position: absolute;
+        color: white;
+        text-decoration:none;
+        font-size: 15px;
+    }
+    .unnes:hover, .ft:hover, .sikadu:hover{
+        text-decoration: underline;
+    }
+
+    .footerdivider{
+        margin-top: -25px;
+        position: absolute;
+        width: 40%;
+        border-bottom: 1px solid white;
+        margin-left: 66%;
+    }
+    .copyright{
+        margin-top: 120px;
+        position: absolute;
+    }
+
+    #textcopyright {
+        color: white;
+        font-family: verdana;
+        font-size: 13px;
+        margin-left: 570px;
+    }
+
+/*=======================================================================  Tombol Floating Back Top  ===========================================================*/
+
+    .cd-top {
+        border: solid white 1px;
+        z-index: 100;
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        position: fixed;
+        bottom: 40px;
+        right: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+        background: url(../asset/up.svg) no-repeat center 50%;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+        -moz-transition: opacity .3s 0s, visibility 0s .3s;
+        transition: opacity .3s 0s, visibility 0s .3s;
+        -webkit-transition-duration:0.3s;
+        transition-duration:0.3s;
+        animation-name: autocolor;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px transparent;
+        -webkit-transition-duration:0.4s;
+        transition-duration:0.4s;
+    }
+
+    .cd-top.cd-is-visible, .cd-top.cd-fade-out, .no-touch .cd-top:hover {
+        -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+        -moz-transition: opacity .3s 0s, visibility 0s 0s;
+        transition: opacity .3s 0s, visibility 0s 0s;
+    }
+    .cd-top.cd-is-visible {
+        /* Transparansi tombol */
+        visibility: visible;
+        opacity: 1;
+        z-index: 100;
+        border-radius: 3px;
+
+    }
+    .cd-top.cd-fade-out {
+        /* Tombol akan transparan apabila di scroll*/
+        opacity: .5;
+    }
+    .no-touch .cd-top:hover {
+        opacity: 1;
+        background-color: #60adac;
+        border-radius: 3px;
+        -webkit-animation-name: hvr-wobble-vertical;
+        animation-name: hvr-wobble-vertical;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .cd-top {
+            right: 20px;
+            bottom: 20px;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        .cd-top {
+            height: 60px;
+            width: 60px;
+            right: 30px;
+            bottom: 30px;
+        }
+    }
+
+    @keyframes autocolor {
+    0%   {background-color:#7B68EE;}
+    15%  {background-color:#1E90FF;} /*r*/
+    25%  {background-color:#8B0000;}
+    35%  {background-color:#008080;} /*y*/
+    45%  {background-color:#DC143C;}
+    65%  {background-color:#483D8B;} /*b*/
+    75%  {background-color:#20B2AA;}
+    85%  {background-color:#3CB371;} /*g*/
+    100% {background-color:#7B68EE;} /*r*/
+    }
+
+/*===============================================================================  END  ========================================================================*/
+
+
